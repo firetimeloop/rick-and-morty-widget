@@ -17,8 +17,6 @@ const RickAndMorty = () => {
   const charactersLength = useAppSelector(selectCharactersLength);
   const filters = useAppSelector(selectFilters);
 
-  const isMoutedRef = React.useRef(false);
-
   const fetchData = async () => {
     const results = await getCharacters(nextPageUrl);
     if (results) {
