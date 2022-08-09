@@ -40,12 +40,7 @@ const RickAndMorty = () => {
   }, [currentCharatersSlice])
 
   useEffect(() => {
-    if (isMoutedRef.current) {
-      getData()
-      return;
-    }
-
-    isMoutedRef.current = true;
+    getData();
   }, [filters])
 
 
